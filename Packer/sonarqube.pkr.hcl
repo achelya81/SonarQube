@@ -14,7 +14,13 @@ source "amazon-ebs" "ubuntu" {
   source_ami = "ami-0bbdd8c17ed981ef9"
   ssh_username = "ubuntu"
   ssh_keypair_name = "sonarqube-key"
-  ssh_private_key_file = "~/.ssh/id_ed25519"
+  ssh_private_key_file = "~/.ssh/id_rsa"
+
+  ami_regions = [
+    "us-east-2"
+    "us-west-1"
+    "us-west-2"
+  ]
 }
 
 build {
