@@ -19,8 +19,16 @@ source "amazon-ebs" "ubuntu" {
   ssh_username = "ubuntu"
   ssh_keypair_name = "sonarqube-key"
   ssh_private_key_file = "~/.ssh/id_rsa"
+
+  ami_regions = [
+    "us-east-2"
+    "us-west-1"
+    "us-west-2"
+  ]
+
 }
 
+  
 build {
   name    = "learn-packer"
   sources = [
