@@ -21,6 +21,11 @@ source "amazon-ebs" "ubuntu" {
     "us-west-1"
     "us-west-2"
   ]
+
+# ami_users = [
+# "123245"
+# ]
+
 }
 
 build {
